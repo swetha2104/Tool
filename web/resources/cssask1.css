@@ -1,0 +1,72 @@
+.main
+{
+    width: 980px;
+    height: auto;
+    //border: 1px solid blue;
+    min-height: 960px;
+    margin-left: 160px;
+}
+.one
+{
+   //border: 1px solid blue;
+float: left;
+width: 758px;
+height: 863px;
+}
+.two
+{
+ //border: 1px solid blue;
+width: 218px;
+float: right;
+height: 864px;
+    
+}
+
+.three
+{
+ // border: 1px solid blue;
+width: 98%;
+min-height: 253px;
+float: left;
+margin-top: 13px;
+}
+.one1
+{
+    float: left;
+ width: 741px;
+height: auto;
+background-color: #cccccc;
+}
+.one2
+{
+    
+    margin-left: 30px;
+}
+.insidetwo1
+{
+     float: left;
+     margin-left:-437px;
+     margin-top: 52px;
+}
+.insidetwo2
+{
+
+float: right;
+margin-top: 46px;
+margin-right: 70px;
+
+}
+ .ui-selectonemenu input.ui-selectonemenu-label {
+
+background: #ddd;
+}
+.ui-inputtextarea-resizable {
+
+background: #ddd;
+}
+.ui-button-text-only .ui-button-text {
+padding: .3em 1em;
+height: 23px;
+width: 55px;
+padding-left: 10px;
+}

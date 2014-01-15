@@ -1,0 +1,50 @@
+
+.body{
+    background-color: darkgray;
+    margin: 0 auto;
+}
+.maincontainer{
+    width: 980px;
+    height: auto;
+    min-height: 1400px;
+    background-color: #ffffff;
+    margin: -20px auto;
+}
+.heading{
+    font-size: 20px;
+    color: #0d75a0;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px aquamarine;
+    //width: 400px;
+    
+}
+.p1{
+    width:470px;
+    height: 250px;
+    margin: 0 0 0 289px;
+    border: 1px solid #ddd;
+}
+.p2{
+    width: 550px;
+    height: 880px;
+    //border: 1px solid #ddd;
+    margin: 20px 0px 0px 246px;
+}
+.p3{
+    width: 200px;
+    height: 200px;
+    //border: 1px solid #ddd;
+    margin: -185px 0 0 23px;
+}
+
+.spec{
+    text-decoration: none;
+}
+
+/*#FeeStructture:j_idt12{
+    width: 140px;
+}*/
+
+#FeeStructture:j_idt14{
+    width: 100px;
+}

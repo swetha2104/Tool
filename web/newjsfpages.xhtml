@@ -1,0 +1,477 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Course_View_More</title>
+        <link rel="stylesheet" href="resources/jsfpages.css" type="text/css"/>
+              
+    </h:head>
+    <h:body class="body">
+        <h:form>
+       
+        <div class="maincontainer">
+            
+            
+                
+                <div class="leftportion">
+                    
+                     <div class="tab">
+                    <center>
+                    <h:outputText value="I WANT TO DO" style="font-size: 11px;font-weight: bold;"/>
+                    </center>
+                    <p:tabView  id= "tabview"  styleClass="tabView1" effect="slide" dynamic="true" style="font-size: 11px; border: none; " >
+                         <p:tab title="PG" id="pg" > 
+                             <div class="img6">
+                              <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1"   label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested Course" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu> 
+                                 </div>
+                             <div class="img5"> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1" style="width: 128px;"  label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested City" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu>  
+                             </div>
+                             <p:graphicImage value="Images/question.png" style="margin-top: 44px;"/>
+                     <div class="img4"> 
+                         <p:commandButton value="Go" style="width: 36px;height: 21px;"/>   
+                     </div>
+                     <h:outputText value=" Seats Available:25 " style="font-size: 10px; color: red;"/>
+                    
+                         </p:tab>
+                        <p:tab title="UG" id="ug"> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1"   label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested Course" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu> <br/><br/> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1" style="width: 132px;"  label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested City" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu>  
+                         </p:tab>
+                        <p:tab title="After 10th" id="ten"> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1"   label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested Course" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu> <br/><br/> 
+                             <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1" style="width: 132px;"  label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested City" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu>  
+                         </p:tab>
+                    </p:tabView>
+                </div>
+                    
+                    <p:graphicImage value="Images/imgbba.png" width="230" height="418" style="margin: 64px 0 0 743px;"/>
+                    
+                </div>
+             <div class="middleportion">
+                
+                 <p:tabView style="height:2600px">
+                     
+                     <p:tab  title="PG " >  
+                     
+                         <p id="tab1a">Course Under PG:</p>
+                       
+                         <div class="aaa">
+                             
+                              <ul style="font-size: 13px;line-height: 30px;">
+                                   <li><p:commandLink id="ajax"  value="Master of Technology(M.Tech)"  style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Arts(MA)"  style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Engineer(ME)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Science (M.Sc)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Law (LLM)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Computer Application" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Business Administration " style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Pharmacy (M.Pharma)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Adult and Continuing Education" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Ancient History and Archeology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Anthropology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Applied Economics" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Dance" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MMA Economics" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Hindi" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA English" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA History" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Human Rights and Duties" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Music" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Philosophy" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Political Science" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Psychology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Sanskrit" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MA Social Work" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Library Science" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Management Program" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Management Studies" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Marketing Management" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Occupational Theraphy" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Performance Management" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Performing Arts" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Personnel Managemen" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Philosophy(M.Phil)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master Of Physical Education(M.P.Ed)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Physiotheraphy" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Psychiatric Epidemiology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Science(BOTANY)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Science(M.S)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Social Dynamics(M.S.D)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Social Work(M.S.W)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Tourism Administrations" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Tourism Management" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Master of Veterinary Science" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Masters of Public Systems Management" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Agricultural Biotechnology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Analysis of Foods, Drugs and Water" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Analytical Chemistry" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Anthropology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Applied Chemistry" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Bio-Inorganic Chemistry" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Biochemistry" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Biotechnology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Botany" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Computer Science" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Coastal Aquaculture Marine Biotechnology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Physical Oceanography" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Physics" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Space Physics" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Statistics" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc VLSI Design, DSP and ESD" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Zoology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="MSc Horticulture Landscape Management" style=" text-decoration: none;"/> </li>
+                                   
+                               </ul>
+                             
+                         </div>
+                         
+                         <div class="bbb">
+                             
+                             <ul style="font-size: 13px;line-height:30px; ">
+                                    <li><p:commandLink id="ajax"  value="Master of Homeopathic Medicine and Surgery " style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Ayurvedic Medicine and Surgery " style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Doctor of Medicine (MD)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Hospitality and Hotel Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Physical Education" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Education (M.Ed) " style="text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Communication Journalism" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Computer Application" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MA Sociology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Management Development Programme" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Architecture(M.Arch)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Arts in Personal Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Arts in Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Arts in Theatre Television" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Audiology  Speech Language Pathology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Business Economics" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Business Laws(M.B.L)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Business Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Business Studies" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Chirurgica" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Comparative Laws" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Computer Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Film Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Finance Control(M.F.C)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Financial Services" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Foreign Trade(M.F.T)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Foreign Trade(M.F.T)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master Of Health Science(M.H.Sc)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Hospital Administration" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Hospitality Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Human Resource Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Information Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of International Business(M.I.B)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Journalism" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Labour Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Law(LL.M)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Laws(M.L)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Library and Information Science(" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Master of Laws(M.L)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Electronics Instrumentation," style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Environmental Chemistry" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Environmental Sciences" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Fishery Science" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Food, Nutrition Drugs and Water" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Foods, Nutrition Dietetics" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Geography B.A(Stream)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Geography - B.Sc.(Stream)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Geology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Geophysics" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Human Genetics" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Hydrology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Inorganic Chemistry" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Marine Biology and Fisheries" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Marine Biotechnology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Marine Chemistry" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Marine Geology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Marine Geophysics" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Meteorology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Microbiology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Nuclear Chemistry" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Nuclear Physics" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Organic Chemistry" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="MSc Physical Chemistry" style=" text-decoration: none; "/> </li>
+                                  
+                              </ul>
+                             
+                         </div>
+                             
+                     
+                     </p:tab>
+                     
+                     <p:tab  title="UG " >  
+                     
+                         <p id="tab1a" >Course Under UG:</p>
+                         
+                         <div class="aaa">
+                             
+                             <ul style="font-size: 13px; line-height: 30px;">
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Ayurvedic Medicine and Surgery" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Administration" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Administration " style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Management " style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Studies" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Commerce " style="text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Communication Journalism" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Computer Applications" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Arts Bachelor of Education" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Administration Bachelor of Law" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Administration" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Studies" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Commerce" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Communication Journalism" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Computer Science(B.C.S)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Design(B.Des)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of education in Artificial Intelligence" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Electronic Science(B.E.S)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Elementary Education(B.EL.Ed)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Fashion Technology(B.F.Tech)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Financial Investment and Analysis" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Fine Arts(B.F.A)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Fishery Sciences(B.F.S)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of General Law(B.G.L)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Hospitality and Tourism Management" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Hotel Management(B.H.M)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Information Systems Management(B.I.S.M)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Labour Management(B.L.M)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Laws(B.L)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Library and Information Science" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Literature(B.Lit)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Medical Laboratory Technology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Medical Record Science(B.M.R.Sc)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Medical Technology(B.M.T)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Medicine Bachelor of Surgery" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Mental Retardation(B.M.R)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Naturopathy and Yogic Sciences" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Occupational Therapy(B.O.T)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Occupational Therapy(B.O.Th)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Optometry and Vision Science" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Physical Education(B.P.E)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor Of Physical Education(B.P.Ed)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Physiotherapy(B.P.T)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Public Relations(B.P.R)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Science Bachelor of Education" style=" text-decoration: none; "/> </li>
+                                   
+                                    
+                                   
+                                   
+                                    
+                                    
+                               </ul>
+                             
+                         </div>
+                         
+                         <div class="bbb">
+                        
+                         
+                             <ul style="font-size: 13px; line-height: 30px;">
+                                   <li><p:commandLink id="ajax"  value="Bachelor Hotel Management"  style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor Library Science"  style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Applied Sciences" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Architecture" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Arts and Education" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Arts and Law" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Arts(B.A)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Audiology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Commerce(B.Com)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Studies(B.B.S)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Communication Journalism" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Dental Surgery(B.D.S)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Naturopathy and Yogic Sciences" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Occupational Therapy(B.O.T)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Occupational Therapy(B.O.Th)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Pharmacy(B.Pharma)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Physical Education(B.P.E)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor Of Physical Education(B.P.Ed)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Physiotherapy(B.P.T)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Public Relations(B.P.R)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Science Bachelor of Education" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Science Education(B.S.E)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Science in Education(B.Sc.Ed)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Science(B.S)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Siddha Medical Sciences(B.S.M.S)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor Of Social Work(B.S.W)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Socio Legal Sciences Bachelor of Laws" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Tourism Administration" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Veterinary Science" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Basic Training Certificate(B.T.C)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Behavioral Healthcare Education(B.H.Ed)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Under Graduate Basic Training(U.G.B.T)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Tourism Administration(B.T.A)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Unani Medicine Surgery(B.U.M.S)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Unani Medicine Surgery" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Veterinary Science(B.V.Sc)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Behavioral Healthcare Education(B.H.Ed)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Under Graduate Basic Training(U.G.B.T)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Under Graduate Teacher Training(U.G.T.T)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Under Graduate Training(U.G.T)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Applied Sciences(B.A.S)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Arts Bachelor of Education" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Science Education(B.S.E)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Science in Education(B.Sc.Ed)" style=" text-decoration: none; "/> </li>
+                                     <li><p:commandLink id="ajax"  value="Bachelor of Science(B.S)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Under Graduate Training(U.G.T)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Siddha Medical Sciences(B.S.M.S)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor Of Social Work(B.S.W)" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Speech Language Audiology" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Under Graduate Training(U.G.T)" style=" text-decoration: none;"/> </li>
+                                    
+                                   
+                               </ul>
+                             
+                         </div>
+                     
+                     </p:tab>
+                     
+                     <p:tab  title="After 10th " >  
+                     
+                         <p id="tab1a">Course  After 10th:</p>
+                       
+                         <div class="aaa">
+                             
+                             <ul style="font-size: 13px; line-height: 30px;">
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Ayurvedic Medicine and Surgery" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Administration" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Administration " style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Management " style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Studies" style=" text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Commerce " style="text-decoration: none; "/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Communication Journalism" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Computer Applications" style=" text-decoration: none; "/> </li>
+                                    
+                               </ul>
+                             
+                         </div>
+                         
+                         <div class="bbb">
+                        
+                               <ul style="font-size: 13px; line-height: 30px;">
+                                   <li><p:commandLink id="ajax"  value="Bachelor Hotel Management"  style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor Library Science"  style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Applied Sciences" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Architecture" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Arts and Education" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Arts and Law" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Arts(B.A)" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Audiology" style=" text-decoration: none;"/> </li>
+                                   <li><p:commandLink id="ajax"  value="Bachelor of Commerce(B.Com)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Business Studies(B.B.S)" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Communication Journalism" style=" text-decoration: none;"/> </li>
+                                    <li><p:commandLink id="ajax"  value="Bachelor of Dental Surgery(B.D.S)" style=" text-decoration: none;"/> </li>
+                                   
+                               </ul>
+                         
+                         </div>
+                         
+                     </p:tab>
+                     
+                     <p:tab  title="Based on Age " >  
+                     
+                         <p id="tab1a">Based on Age:</p>
+                     
+                     </p:tab>
+                     
+                     
+                 </p:tabView>
+                 
+                
+            </div>
+                
+            <div class="rightportion">
+                
+                
+                <div class="testimonials" style="height: 229px;width: 232px;float: left; font-size: 13px;">
+                    <h3 style="margin-top: 13px;font-size: 15px; text-align: center;">TESTIMONIALS</h3>
+                    <h:panelGrid columns="1">
+                        <p style="padding: 3px;margin-top: -9px;margin-bottom: 17px; font-size: 14px;">
+                             I have successfully completed my MBA marketing education course in 2011 and got placed in a very good Reputed company. It was good with the college hostel facilities and campus."
+                        </p>
+                        <div style="float: left;">
+                            <h:panelGrid columns="2" style="margin-top: -13px;">
+                                <h:graphicImage url="Images/male.png" height="75px" width="75px"/>
+                                <h:panelGrid columns="1">
+                                    <h:outputText value="Osion Brian" style="font-style: italic;color: darkturquoise;" />
+                                    <h:outputText value="-PSIT, Bangalore" style="font-style: italic" />
+                                </h:panelGrid>
+                            </h:panelGrid>
+                        </div>
+                    </h:panelGrid>
+                    
+                </div>
+                
+                <div class="regis">
+                    
+                   
+                            <p:panel header="Register Form" style="width: 230px;font-size: 14px;" widgetVar="regpanel">    
+                                <p:inputText id="name" value="#{myBean.username}" style="width: 206px;margin-top: 5px;height: 18px;"/><br/>
+                                <p:watermark for="name" value="Name*" /> 
+
+                                <p:inputText id="email" value="#{myBean.username}" style="width: 206px;margin-top: 4px;height: 18px;"/><br/>
+                                <p:watermark for="email" value="Email*" /> 
+                                <p:inputText id="mn" value="#{myBean.username}" style="width: 206px;margin-top: 4px;height: 18px;"/>
+                                <p:watermark for="mn" value="Mobile Number" /> 
+                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width: 212px;margin-top: 4px;margin-bottom: 4px;"><br/>
+                                    <f:selectItem itemLabel="Current City*" itemValue=""/>
+                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                </p:selectOneMenu>
+                                <h:outputText value="Educational Details" style="margin-top: 6px;font-weight: bold"/>
+                                <p:selectOneMenu id="seldeg" value="#{myBean.username}" style="width: 212px;margin-top: 4px;"><br/>
+                                    <f:selectItem itemLabel="Current Degree*" itemValue="" />
+                                    <f:selectItem itemLabel="B.Tech" itemValue="B.Tech"/>
+                                    <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                                </p:selectOneMenu><br/>
+
+                                <p:inputText  id="yog" value="#{myBean.username}" style="width: 206px;margin-top: 4px;margin-bottom: 4px;height: 18px;"/><br/>
+                                <p:watermark for="yog" value="Year of Graduation" /> 
+                                <h:outputText value="Educational Preferences" style="margin-top: 4px;font-weight: bold"/>
+                                <p:selectOneMenu id="edupref" value="#{myBean.username}" style="width: 212px;margin-top: 4px;margin-bottom: 4px;"><br/>
+                                    <f:selectItem itemLabel="Education Interest*" itemValue=""/>
+                                    <f:selectItem itemLabel="B.Tech" itemValue="B.Tech"/>
+                                    <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                                </p:selectOneMenu><br/>
+                                <h:selectBooleanCheckbox value="#{myBean.username}">
+                                </h:selectBooleanCheckbox> 
+                                <h:outputText value="I agree to the Terms of service and Privacy Policy" style="font-size: 11px;font-style: italic"/><br/>
+
+                                <h:commandButton value="JOIN" action="#" styleClass="cmd"/>
+                            </p:panel>
+                       
+                    
+                    
+                </div>
+                
+            </div>
+            
+           
+            
+            
+            
+        </div>
+        </h:form>
+    </h:body>
+</html>
+

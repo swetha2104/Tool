@@ -1,0 +1,27 @@
+body{
+    background-color: white;
+       
+}
+.maincontainer{
+    margin: 0px auto;
+    width: 960px;
+    border: 1px solid white;
+    height: 2413px;
+}
+
+.content{
+    margin: 30px;
+border: 1px solid whitesmoke;
+margin-left: 100px;
+margin-right: 100px;
+height: 2300px;
+
+}
+.look{
+   margin: 100px auto;
+margin-left: 104px;
+margin-right: 100px;
+border: 2px solid green;
+min-height: 300px;
+}
+ul li{float:left;}

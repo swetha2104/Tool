@@ -1,0 +1,165 @@
+.maincontainer{ width: 980px;
+    height: auto;
+    min-height: 1125px;
+    border: 1px solid white;
+    margin: 0 auto;
+    background-color: anwhite; background-color: white;}
+
+.image1{
+    margin: 0 0 0 -19px;
+}
+.txt{
+   width: 201px;
+height: 17px;
+}
+.tabView1 {
+size: 168px;
+width: 806px;
+margin-left: 272px;
+border: none;
+}
+.ui-selectmanycheckbox label, .ui-selectoneradio label {
+display: block;
+margin-top: -1px;
+font-size: 14px;
+color: #0099ff;
+}
+.txt1{
+    height: 21px;
+}
+.drop1{
+    width: 210px;
+    font-size: 14px;
+    text-align: left;
+}
+.content4{
+   border: 1px solid white;
+float: right;
+
+   margin: 25px 538px -24px 159px;
+   background: #ffffff;
+
+   height: 366px;
+
+   width: 275px; 
+}
+.content5{
+   border: 1px solid white;
+float: right;
+
+   margin: -350px 202px -24px 19px;
+   background: #ffffff;
+
+   height: 366px;
+
+   width: 275px; 
+  
+}
+.content6{
+   border: 1px solid white;
+float: right;
+margin: 53px 479px 49px 48px;
+background: #ffffff;
+height: 178px;
+width: 275px; 
+  
+}
+.content7{
+  border: 1px solid white;
+float: right;
+margin: 50px -578px 73px -315px;
+background: #ffffff;
+height: 189px;
+width: 275px;
+  
+}
+.content8{
+   border: 1px solid white;
+float: right;
+margin: 56px 735px 64px -291px;
+background: #ffffff;
+height: 25px;
+width: 26px;
+  
+}
+.content9{
+   border: 1px solid white;
+float: right;
+
+  margin: 38px 123px 119px -224px;
+   background: #ffffff;
+
+   height: 69px;
+
+   width: 126px; 
+  
+}
+.content10{
+   border: 1px solid white;
+float: right;
+
+  margin: -40px 702px 149px -200px;
+   background: #ffffff;
+
+   height: 151px;
+
+   width: 133px; 
+  
+}
+.content11{
+   border: 1px solid white;
+float: right;
+
+ margin: -38px -154px 188px -200px;
+   background: #ffffff;
+
+   height: 151px;
+
+   width: 133px; 
+  
+}
+
+.content12{
+   border: 1px solid white;
+float: right;
+
+   margin: 23px -300px 188px -200px;
+   background: #ffffff;
+
+   height: 40px;
+
+   width: 122px; 
+  
+}
+.content13{
+   border: 1px solid white;
+float: right;
+
+   margin: 189px -216px 188px -200px;
+   background: #ffffff;
+
+   height: 40px;
+
+   width: 215px; 
+  
+}
+.cal{
+    width: 202px;
+}
+.image2{
+     border: 1px solid white;
+float: left;
+margin: 40px 151px -43px 156px;
+background: white;
+height: 96px;
+width: 91px;
+}
+.txt2{
+  border: 1px solid white;
+float: left;
+margin: -23px 124px -43px 282px;
+background: white;
+height: 29px;
+width: 184px;
+
+}

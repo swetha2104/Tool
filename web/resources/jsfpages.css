@@ -1,0 +1,120 @@
+.body{
+    background-color: darkgray;
+    margin: 0 auto;
+}
+.maincontainer{
+    width: 980px;
+    height: auto;
+    min-height: 900px;
+    background-color: #ffffff;
+    margin: -20px auto;
+}
+.middleportion{
+    width: 48%;
+    height: auto;
+/*    border: 1px solid #ddd;*/
+    margin: 0 14px 0 14px;
+    float: left;
+    
+}
+.leftportion{
+    width: 24%;
+    height: 800px;
+    // border: 1px solid #ddd;
+    margin: 0 2px 0 0;
+    
+    float: left;
+}
+.rightportion{
+    width: 24%;
+    height: 500px;
+    // border: 1px solid #ddd;
+    margin: 0 0 0 3px;
+    
+    float: left;
+}
+#tab1a{
+    font-size: x-large;
+font-weight: bold;
+color: #0d75a0;
+float: left;
+}
+.aaa{
+    width: 55%;
+    height: 500px;
+    //border: 1px solid #ddd;
+    //float: left;
+    margin:62px 0 0 -28px;
+        
+}
+.bbb{
+     width: 57%;
+    height: 400px;
+    //border: 1px solid #ddd;
+    float: right;
+    margin: -502px -27px 0 0px;
+}
+.tab{
+      border: 1px solid white;
+
+     float:left;
+
+     margin:19px 1px -41px 742px;
+background: white;
+
+     height: 210px;
+
+     width: 234px;  
+    font-size: 12px;
+}
+.img4{
+   
+     border: 1px solid white;
+float: left;
+
+     margin: -56px 33px -43px 92px;
+background: white;
+
+     height: 28px;
+
+     width: 43px;  
+}
+.img5{
+   
+ border: 1px solid white;
+float: left;
+margin: 47px 33px -43px 14px;
+background: white;
+height: 26px;
+width: 137px;
+}
+.img6{
+   
+     border: 1px solid white;
+float: left;
+
+     margin: 6px 33px -43px 14px;
+background: white;
+
+     height: 28px;
+
+     width: 125px;  
+}
+/*.img11{
+   
+    width: 230px;
+    height: 418px;
+    margin: 0 0 0 0;
+}*/
+.testimonials{
+    margin: 18px 0 0 -735px;
+    border: 1px solid #ddd;
+    text-align: justify;
+    float: left;
+}
+.regis{
+    margin:252px 0 0 -739px;
+
+   // border: 1px solid #ddd;
+    float: left;
+}

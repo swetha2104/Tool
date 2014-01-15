@@ -1,0 +1,15 @@
+.maincontainer{ width: 980px;
+    height: auto;
+    min-height: 1125px;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color: anwhite; background-color: lightskyblue;}
+
+.right{
+width: 163px;
+height: 30px;
+border: 1px solid black;
+margin-top: 58px;
+background-color: anwhite;
+background-color: white;
+}

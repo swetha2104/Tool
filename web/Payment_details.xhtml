@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+          <link rel="stylesheet" href="resources/simple5.css" />
+        <style>
+            .tabView1{
+                size: 168px;
+                width: 806px;
+                margin-left: 272px;
+            }
+           
+            input::-webkit-input-placeholder {
+         font-size: 12px;
+         
+         color: #0099ff;
+        </style>
+    </h:head>
+    <h:body>
+     <div  class="maincontainer">
+         <h:form>
+             <center>
+                      
+                         <p:graphicImage value="images/step5.png" width="800" styleClass="image1" />
+                  
+                   <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="7">  
+  
+        
+                       <p:selectOneRadio id="options2" value="#{admissionBean3.options}">  
+                     <f:selectItem itemLabel="Debit Card" itemValue="1" />  
+                     <f:selectItem itemLabel="Credit Card" itemValue="2" />
+                      <f:selectItem itemLabel="NetBanking" itemValue="3" />  
+                       <f:selectItem itemLabel="Paypal" itemValue="4" />  
+            
+                    </p:selectOneRadio>
+                         </h:panelGrid> 
+                       <p:inputText id="credit" value="#{admissionBean3.card}" required="true" >
+                        <p:watermark for="credit" value="Card no"/>
+                       
+                    </p:inputText>
+                    <p:message for="credit"/><br/>
+                    <p:calendar id="exp">
+                        <p:watermark for="exp" value="Expiry Date"/> 
+                    </p:calendar><br/><br/>
+                    <p:inputText id="cvv" value="#{admissionBean3.cvv}" required="true" >
+                        <p:watermark for="cvv" value="CVV"/>
+                       
+                    </p:inputText>
+                    <p:message for="cvv"/><br/>
+                    <p:commandButton id="btn14" value="Procces to secure pay" style="height: 32px;width: 95px;font-size: 16px;" actionListener="#{admissionBean3.savePerson}" />
+                      <p:commandButton id="btn8" value="Cancel" style="height: 32px;width: 95px;font-size: 16px;margin: 0 0 0 17px;" actionListener="#{admissionBean3.savePerson}" />
+                       </center>
+         </h:form>
+     </div>
+    </h:body>
+</html>
+

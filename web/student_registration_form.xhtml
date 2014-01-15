@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <center>
+                <p:panel header="Student Registration form" >
+                    <p:inputText id="firstname" value="#{studentReg.firstname}" required="true" >
+                        <p:watermark for="firstname" value="First Name"/>
+                        <f:validateLength minimum="3"/>
+
+                    </p:inputText>
+                    <p:message for="firstname"/> <br/>
+<!--                    <p:inputText id="lastname" value="#{studentReg.lastname}" required="true" >
+                        <p:watermark for="lastname" value="Last Name "/>
+                        <f:validateLength minimum="3"/>
+
+                    </p:inputText>
+                    <p:message for="lastname"/> <br/>-->
+                    <p:password id="password" value="#{studentReg.password}" required="true" >
+                        <p:watermark for="password" value="Password"/>
+                        <f:validateLength minimum="10" maximum="50" />
+                    </p:password>
+                    <p:message for="password"/><br/>
+                    <p:inputText id="email" value="#{studentReg.email}" required="true" >
+                        <p:watermark for="email" value="Email"/>
+                        <f:validateLength minimum="3"/>
+
+                    </p:inputText>
+                    <p:message for="email"/> <br/>
+<!--                    <p:password id="confirmpassword" value="#{studentReg.confirmpassword}" required="true" >
+                        <p:watermark for="confirmpassword" value="Confirm Password"/>
+                        <f:validateLength minimum="10" maximum="50" />
+                    </p:password>
+                    <p:message for="confirmpassword"/><br/>-->
+                    <p:calendar id="date" value="#{studentReg.date}" required="true">
+                         <p:watermark for="date" value="Date of birth"/>
+                        <f:convertDateTime for="date" pattern="dd-MM-yyyy"/>
+                    </p:calendar>
+                     <p:message for="date"/><br/>
+<!--                    <p:inputText id="date" value="#{studentReg.date}" required="true">
+                        <p:watermark for="date" value="Date of birth"/>
+                        <f:convertDateTime for="date" pattern="dd-MM-yyyy"/>
+                    </p:inputText>
+                    <p:message for="date"/><br/>-->
+                    <p:selectOneMenu value="#{studentRegArray.gender}"  panelStyle="width:112px">  
+                        <f:selectItem itemLabel="Select gender" itemValue=""/> 
+                        <f:selectItems value="#{studentRegArray.genders}" />  
+                    </p:selectOneMenu><br/><br/>
+                    <p:selectOneMenu value="#{studentRegArray.gender}"  panelStyle="width:112px">  
+                        <f:selectItem itemLabel="Select gender" itemValue=""/> 
+                        <f:selectItems value="#{studentRegArray.genders}" />  
+                    </p:selectOneMenu><br/><br/>
+                    <p:inputMask id="mobile" value="#{studentReg.mobileno}" mask="(999) 999-9999">
+                        <p:watermark for="mobile" value="Mobile Number"/>  
+                    </p:inputMask><br/><br/>
+                  
+                    
+
+                    <p:commandButton id="btn" ajax="false" value="save"  actionListener="#{studentReg.savePerson}" />
+                </p:panel>
+            </center>
+        </h:form> 
+    </h:body>
+</html>
+

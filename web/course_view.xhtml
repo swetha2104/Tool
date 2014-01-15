@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <title>course_view more course</title>
+        <link rel="stylesheet" href="resources/course_view.css" type="text/css"/>
+    </h:head>
+    <h:body class="body">
+       
+        <div class="maincontainer">
+             
+            <h:form>
+            
+            <div class="heading">
+                <p><center> Master of Business Adminstration: (MBA)</center></p>
+            </div>
+            <div class="p1">
+                <p:graphicImage value="Images/colimg.jpg"  width="470px" height="250px"/>
+                
+            </div>
+            <div class="p3">
+                <p:dataTable value="#{manageBean.agents}" id="FeeStructture" var="fee" style="height: 50px; width: 210px;">
+                    <p:column   style="width: 160px;" filterBy="fee" >
+                       
+                        <h:link value="#{fee.special}" class="spec" />
+                    </p:column>
+                   
+                </p:dataTable>
+                
+            </div>
+            <div class="p2">
+                <h3>Course Details:</h3>
+                <p style="padding: 15px;line-height: 20px;font-size: 14px;text-align: justify;">
+                    The MBA course is approved by AICTE, Govt. of India and is run under the 
+                    curriculum of Visvesvaraya Technological University, The course is carefully
+                    designed and updated by the university keeping in view the changing needs of
+                    manufacturing and service industry. Upon successful completion of the course, the
+                    degree is awarded by Visvesvaraya Technological University.
+                    Young managers are required at different levels in the areas of Finance, Human
+                    Resources, Marketing, Information Technology and so on. The curriculum puts
+                    significant emphasis on the ability of the student to have an integrated view of the
+                    management and apply them to the real life situations. It lays emphasis on taking
+                    decisions and developing focussed education combined with practical exposure to
+                    create value to the students coming out of academics. It aims at developing
+                    students into effective managers with good communication skills and leadership
+                    capabilities. The attributes that are ingrained in them are knowledge, skills, values
+                    and attitudes.
+                    
+                </p>
+                <h3>Fee Structure:</h3>
+                <p:dataTable value="#{manageBean.agents}" id="FeeStructture" var="fee"   style="width: 535px;  border: 1px solid black;">
+                    <p:column  headerText="Place" style="width: auto;" >
+                        <h:outputText value="#{fee.place}"/>
+                    </p:column>
+                    
+                    <p:column headerText="Fee Details" style="width:auto;">
+                        <h:outputText value="#{fee.fees}" style="width: 100px;"/></p:column>
+                </p:dataTable>
+                <h3>Duration:</h3>
+                <p style="padding: 15px;line-height: 20px;font-size: 14px;">2 years consisting of 4 semesters.</p>
+                <h3>Eligibility:</h3>
+                <p style="padding: 15px;line-height: 20px;font-size: 14px;text-align: justify;">
+                    Candidates who have passed Bachelor Degree examination of Bengaluru
+                    University with not less than 50% of marks in aggregate in all the three years of
+                    Degree examination or any other University equivalent thereto with 50% marks.
+                    However in case of candidates from Karnataka belonging to SC/ST and Cat-I
+                    the aggregate percentage of marks in the qualifying examination shall not be less
+                    than 45% of marks.
+                    At the time of admission students have to produce the ranks obtained in any one
+                    of the National Level Test/State Level Test / PGCET/ K-MAT score Certificate.
+                </p>
+                <p:commandButton value=" Submit" style="float: right;">
+                </p:commandButton>
+            </div>
+            
+            </h:form>
+        
+        </div>
+            
+    </h:body>
+</html>
+

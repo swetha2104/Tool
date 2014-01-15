@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Testimonials</title>
+        <link rel="stylesheet" href="resources/css/mohartohome.css" />
+        <style>
+
+        </style>
+    </h:head>
+    <h:body>
+        <f:view>
+            <div class="testcont">
+                <h:outputText value="OUR TESTIMONIALS" style="font-size: x-large;font-weight: bolder;color: #00ccff;font-family: arial;"/>
+                <h:form id="form">
+                    <div class="testpic" >
+
+                        <p:dataGrid var="dt" value="#{dGBean.data}" columns="2" rows="2" paginator="true" style="margin: 25px;"  paginatorPosition="bottom" >  
+
+                            <div class="data">
+                                <p:panel style="width: 309px;height: 197px;border: 1px solid;">  
+
+                                    <div class="testcontent">      
+                                        <h:outputText value="#{dt.content}" />
+                                    </div>
+
+                                    <h:panelGrid columns="2" style="background-color: white;">
+                                        <p:graphicImage value="resources/images/#{dt.imgname}.png" height="90px" width="90px;"/>   
+                                        <h:panelGrid columns="1">
+                                            <h:outputText value="" />  
+                                            <h:outputText value=" #{dt.name}" style="color: crimson;font-size: 14px;font-weight: bold;font-style: italic;"/>
+                                            <h:outputText value="- #{dt.college}" style="font-size: 14px;font-style: italic;"/>  
+                                            <h:outputText value="" />  
+
+                                        </h:panelGrid>
+                                    </h:panelGrid>
+                                </p:panel>  
+                            </div>      
+                        </p:dataGrid>
+                        <br/>
+                        <br/>
+
+                        <p:dataGrid var="dt2" value="#{vTBean.url}" columns="2" rows="2" paginator="true" paginatorPosition="bottom" >
+                            <p:panelGrid columns="1" >
+
+                                <p:media value="#{dt2}" width="290px" height="230px" player="flash"/>
+
+                            </p:panelGrid>
+
+                        </p:dataGrid>   
+
+                    </div> 
+                </h:form>
+
+                <p:panel style="float: right;">
+                    <div class="regform" >
+                        <h:form>
+                            <p:panel header="Register Form" style="width: 250px;font-size: 14px;" widgetVar="regpanel">    
+                                <p:inputText id="name" value="#{myBean.username}" style="width: 206px;margin-top: 5px;height: 18px;"/><br/>
+                                <p:watermark for="name" value="Name*" /> 
+
+                                <p:inputText id="email" value="#{myBean.username}" style="width: 206px;margin-top: 4px;height: 18px;"/><br/>
+                                <p:watermark for="email" value="Email*" /> 
+                                <p:inputText id="mn" value="#{myBean.username}" style="width: 206px;margin-top: 4px;height: 18px;"/>
+                                <p:watermark for="mn" value="Mobile Number" /> 
+                                <p:selectOneMenu id="selcity" value="#{myBean.username}" style="width: 212px;margin-top: 4px;margin-bottom: 4px;"><br/>
+                                    <f:selectItem itemLabel="Current City*" itemValue=""/>
+                                    <f:selectItem itemLabel="Bangalore" itemValue="Bangalore"/>
+                                    <f:selectItem itemLabel="chennai" itemValue="chennai"/>
+                                    <f:selectItem itemLabel="Kochi" itemValue="Kochi"/>
+                                </p:selectOneMenu>
+                                <h:outputText value="Educational Details" style="margin-top: 6px;font-weight: bold"/>
+                                <p:selectOneMenu id="seldeg" value="#{myBean.username}" style="width: 212px;margin-top: 4px;"><br/>
+                                    <f:selectItem itemLabel="Current Degree*" itemValue="" />
+                                    <f:selectItem itemLabel="B.Tech" itemValue="B.Tech"/>
+                                    <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                                </p:selectOneMenu><br/>
+
+                                <p:inputText  id="yog" value="#{myBean.username}" style="width: 206px;margin-top: 4px;margin-bottom: 4px;height: 18px;"/><br/>
+                                <p:watermark for="yog" value="Year of Graduation" /> 
+                                <h:outputText value="Educational Preferences" style="margin-top: 4px;font-weight: bold"/>
+                                <p:selectOneMenu id="edupref" value="#{myBean.username}" style="width: 212px;margin-top: 4px;margin-bottom: 4px;"><br/>
+                                    <f:selectItem itemLabel="Education Interest*" itemValue=""/>
+                                    <f:selectItem itemLabel="B.Tech" itemValue="B.Tech"/>
+                                    <f:selectItem itemLabel="BBA" itemValue="BBA"/>
+                                </p:selectOneMenu><br/>
+                                <h:selectBooleanCheckbox value="#{myBean.username}">
+                                </h:selectBooleanCheckbox> 
+                                <h:outputText value="I agree to the Terms of service and Privacy Policy" style="font-size: 11px;font-style: italic"/><br/>
+
+                                <h:commandButton value="JOIN" action="#" styleClass="cmd"/>
+                            </p:panel>
+                        </h:form>
+                    </div>
+                </p:panel>
+                <div class="clear"/>
+                <div class="ad_left" style="width: 600px;height: auto;margin-top: 20px;">
+                    <div class="ad1" style="width: 345px;height: 150px;">
+                        <h:graphicImage value="resources/images/ad1.png" width="330px" height="110px" style="margin-left: 9px;
+                                        "/>
+                    </div>
+                         <div class="ad3" style="float: right;float: top;margin-top: -150px;height: 300px;">
+                        <h:graphicImage value="resources/images/ad3.png" width="250px" height="240px" style="margin-left: 9px;
+                                        float: right;"/>
+                    </div>
+                    <div class="ad2" style="width: 345px;height: 150px;">
+                        <h:graphicImage value="resources/images/ad2.png" width="330px" height="110px" style="margin-left: 9px;
+                                        margin-top: -20px;"/>
+                    </div>
+               
+
+                </div>
+                
+                <div class="ad_right" style="float: right;min-height: 200px;width: 238px;margin-top: -410px;">
+                    <div class="ad4">
+                     <h:graphicImage value="resources/images/ad4.png" width="250px" height="304px;" style="margin-top: -110px;margin-left: -12px"/>
+                    </div>
+                    
+                    <div class="ad4">
+                     <h:graphicImage value="resources/images/ad5.png" width="250px" height="150px;" style="margin-top: 10px;margin-left: -12px"/>
+                    </div>
+                </div>
+            </div> 
+
+        </f:view>
+    </h:body>
+</html>

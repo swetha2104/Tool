@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <center>
+            <p:panel header="College Registration form">
+               
+                    <h:outputLabel for="collegename" value="*" style="color: red"/>
+                    <p:inputText id="collegename" value="#{collegeReg.college_name}" required="true" >
+                        <p:watermark for="collegename" value="College Name"/>
+                        <f:validateLength minimum="3"/>
+                        
+                    </p:inputText>
+                    <p:message for="collegename"/> <br/><br/>
+                      <h:outputLabel for="country" value="*" style="color: red"/>
+                      <p:selectOneMenu id="country" value="#{collegeRegArray.city}" >  
+                <f:selectItem itemLabel="Select Country" itemValue="" />  
+                <f:selectItems value="#{collegeRegArray.cities}" />  
+                <p:ajax update="suburbs"  
+                        listener="#{collegeRegArray.handleCityChange()}" />  
+            </p:selectOneMenu> 
+                      
+  
+                      <p:selectOneMenu id="suburbs" value="#{collegeRegArray.suburb}" >  
+                <f:selectItem itemLabel="Select city" itemValue="" />  
+                <f:selectItems value="#{collegeRegArray.suburbs}" />  
+            </p:selectOneMenu>
+                       <p:message for="suburbs"/><br/><br/>
+               
+<!--                <p:inputTextarea rows="5" cols="30"  maxlength="10"       
+                                 counterTemplate="{0} characters remaining." autoResize="true" required="true"/> -->
+                
+<!--                <h:outputLabel for="postalcode" value="*" style="color: red"/>
+                <p:inputText id="postalcode" value="#{collegeReg.postal_code}" required="true" >
+                        <p:watermark for="postalcode" value="Postal code"/>
+                        <f:validateLength minimum="6" maximum="10" />
+                 </p:inputText><br/><br/>-->
+                 <h:outputLabel for="phno" value="*" style="color: red"/>
+<!--                 <p:inputText id="phno" value="#{collegeReg.phone_number}" required="true" >
+                        <p:watermark for="phno" value="Mobile Number"/>
+                        <f:validateLength minimum="10" maximum="12" />
+                 </p:inputText><br/><br/>-->
+                 <h:outputLabel for="email" value="*" style="color: red"/>
+                 <p:inputText id="email" value="#{collegeReg.email}" required="true" >
+                        <p:watermark for="email" value="Email"/>
+                        <f:validateLength minimum="10" maximum="50" />
+                 </p:inputText>
+                 <p:message for="email"/><br/><br/>
+                 <h:outputLabel for="password" value="*" style="color: red"/>
+                 <p:password id="password" value="#{collegeReg.password}" required="true" >
+                        <p:watermark for="password" value="Password"/>
+                        <f:validateLength minimum="10" maximum="50" />
+                 </p:password>
+                 <p:message for="password"/><br/><br/>
+                 <h:outputLabel for="confirmpassword" value="*" style="color: red"/>
+                 <p:password id="confirmpassword" value="#{collegeReg.confirm_password}" required="true" >
+                        <p:watermark for="confirmpassword" value="confirm Password"/>
+                        <f:validateLength minimum="10" maximum="50" />
+                 </p:password>
+                 <p:message for="confirmpassword"/><br/><br/>
+                 <p:selectOneMenu value="#{collegeRegArray.selectedUniversity}" label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px">  
+                      <f:selectItem itemLabel="Select Universities" itemValue="" /> 
+                     <f:selectItems value="#{collegeRegArray.universities}" />  
+    </p:selectOneMenu>  <br/>
+  
+    
+    
+               
+                <h:commandButton id="btn" value="Register" actionListener="#{collegeReg.savePerson}" />
+                <br/>
+                
+               
+            </p:panel>
+                </center>
+        </h:form>
+    </h:body>
+</html>
+

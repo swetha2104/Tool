@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+         <link rel="stylesheet" href="resources/simple5.css" />
+        <style>
+            .tabView1{
+                size: 168px;
+                width: 806px;
+                margin-left: 272px;
+            }
+           
+            input::-webkit-input-placeholder {
+         font-size: 12px;
+         
+         color: #0099ff;
+        </style>
+    </h:head>
+    <h:body>
+      <div  class="maincontainer">
+          <h:form>
+               <center>
+                       <p:graphicImage value="images/step6.png" width="800" styleClass="image1" /><br/>
+                   <h:outputText value="Confirmation"/><br/><br/>
+                   <h:outputText value="Thank you for applying"/><br/><br/>
+                   <h:outputText value="Your application number is BRDVN23189 and with this number you to contact with college"/><br/><br/>
+                   <p:commandButton id="btn9" value="View Application" style="height: 32px;width: 95px;font-size: 16px;margin: 0 0 0 17px;" actionListener="#{admissionBean4.savePerson}" />
+                    <p:commandButton id="btn13" value="Print" style="height: 32px;width: 95px;font-size: 16px;margin: 0 0 0 17px;" actionListener="#{admissionBean4.savePerson}" />
+                    </center>
+          </h:form>
+      </div>
+    </h:body>
+</html>
+

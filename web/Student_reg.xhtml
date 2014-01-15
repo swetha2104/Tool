@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+         <link rel="stylesheet" href="resources/simple5.css" />
+        <style>
+            .tabView1{
+                size: 168px;
+                width: 806px;
+                margin-left: 272px;
+            }
+           
+            input::-webkit-input-placeholder {
+         font-size: 12px;
+         
+         color: #0099ff;
+        </style>
+    </h:head>
+    <h:body>
+        <div  class="maincontainer">
+        <h:form>
+           
+           <center>
+                            
+                        <p:graphicImage value="images/step1.png" width="800" styleClass="image1" /><br/>
+                       
+                        <p:inputText id="name" value="#{admissionBean1.name}" styleClass="txt"  title="name"  required="true">
+                        <p:watermark for="name" value=" Name"/>
+<!--                        <p:tooltip for="name" showEvent="focus" hideEvent="blur" showEffect="clip" />  -->
+<!--                        <p:clientValidator event="keyup"/>-->
+                  </p:inputText>
+                         <p:message for="name" display="icon" />  
+                        
+<!--                        <h:outputText value="#{admissionBean1.name}" /> -->
+                   <br/> 
+              
+                   
+                    <p:password id="password" value="#{admissionBean1.password}" styleClass="txt" >
+                        <p:watermark for="password" value=" Password"/>
+                        
+                 </p:password><br/><br/>
+                 
+                 <p:inputText id="email" value="#{admissionBean1.email}"  title="Email" required="true" styleClass="txt">
+                        <p:watermark for="email" value=" Email"/>
+                        <f:validateLength minimum="1"/> 
+                           
+                  </p:inputText>
+<!--                 <p:tooltip for="email" showEvent="focus" hideEvent="blur" showEffect="clip" hideEffect="explode"/> -->
+                   <p:message for="email" display="icon"/>
+
+                     <br/> 
+                     <p:inputText id="phone" value="#{admissionBean1.phone}" required="true" styleClass="txt">
+                        <p:watermark for="phone" value=" Phone No"/>
+                        
+                  </p:inputText>
+<!--                     <p:tooltip for="phone" showEffect="clip" hideEffect="explode">  
+        <p:graphicImage value="/images/primefaces_logo.jpg" />  
+    </p:tooltip> -->
+<!--                     <p:message for="phone"/>-->
+                     <br/> <br/>
+                     <p:selectOneMenu value="#{admissionBeanArray1.selectedcourse}" styleClass="drop1" style="width: 210px;font-size: 14px;text-align: left;"  label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px" required="true">  
+                      <f:selectItem itemLabel="Interested Course" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.courses}" /> 
+                     </p:selectOneMenu>  <br/><br/>
+                     <p:selectOneMenu value="#{admissionBeanArray1.selectedlocation}" style="width: 210px;font-size: 14px;text-align: left;"  label="Universities" filter="true" filterFunction="filter" filterMatchMode="startsWith" panelStyle="width:220px">  
+                      <f:selectItem itemLabel="Interested Location" itemValue="" /> 
+                      <f:selectItems value="#{admissionBeanArray1.locations}" />  
+                     </p:selectOneMenu>  <br/>
+                     <h:panelGrid columns="2" style="margin-bottom:10px" cellpadding="7">  
+  
+        
+                         <p:selectOneRadio id="options1" value="#{admissionBean1.gender}" styleClass="txt">  
+                     <f:selectItem itemLabel="Male" itemValue="1" />  
+                     <f:selectItem itemLabel="Female" itemValue="2" />  
+            
+                    </p:selectOneRadio>
+                         </h:panelGrid> 
+<!--                     <p:notificationBar position="center" effect="slide" widgetVar="bar" styleClass="top" effectSpeed="fast" autoDisplay="true">  
+    <h:outputText value="Thanks for registering!" style="color:black;font-size:20px;  "  />  
+</p:notificationBar>  -->
+<p:commandButton id="btn1" value="Register" actionListener="#{admissionBean1.savePerson}"  style="height: 32px;width: 95px;font-size: 16px;" type="button" />
+<!--                         <p:commandButton value="Hide"  type="button" style="height: 32px;width: 95px;font-size: 16px;margin: 0 0 0 17px;"/>  -->
+                    </center>
+        </h:form>
+            </div>
+    </h:body>
+</html>
+
